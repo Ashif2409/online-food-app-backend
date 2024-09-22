@@ -34,8 +34,8 @@ export interface CreateOfferInputs{
     description:string,
     minValue:number,//minimum order amount should be 300
     offerAmount:number,
-    startValidity:Date,
-    endValidity:Date,
+    startValidity:string,
+    endValidity:string,
     promocode:string,//week40
     promoType:string, //bank//user//all/card
     bank:[any],

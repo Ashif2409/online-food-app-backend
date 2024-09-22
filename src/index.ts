@@ -1,15 +1,15 @@
 import express, { Request, Response, NextFunction,Application } from 'express';
 import mongoose from 'mongoose';
 import path from 'path';
+import bodyParser from 'body-parser';
 import { VandorRoutes, AdminRoutes, DeliveryRoutes, ShopingRoutes, CustomerRoutes } from './routes';
 import { MONGODBURI } from './config';
 
 const app: Application = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(bodyParser.json());
 app.use('/images', express.static(path.join(__dirname, 'images')));
-
 mongoose.connect(MONGODBURI)
     .then(() => console.log("DB connected"))
     .catch(err => console.error("Error connecting to DB:", err));

@@ -1,5 +1,5 @@
 export * from './AdminRoutes'
-export * from './VandorRoutes'
+export * from './VendorRoutes'
 export * from './ShopingRoutes'
 export * from './CustomerRoutes'
 export * from './DeliveryRoutes'

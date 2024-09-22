@@ -7,8 +7,8 @@ export interface OfferDoc extends Document{
     description:string,
     minValue:number,//minimum order amount should be 300
     offerAmount:number,
-    startValidity:Date,
-    endValidity:Date,
+    startValidity:string,
+    endValidity:string,
     promocode:string,//week40
     promoType:string, //bank//user//all/card
     bank:[any],
@@ -27,8 +27,8 @@ const OfferSchema = new Schema({
     description:{type:String},
     minValue:{type:Number , require:true},//minimum order amount should be 300
     offerAmount:{type:Number , require:true},
-    startValidity:{type:Date},
-    endValidity:{type:Date},
+    startValidity:{type:String},
+    endValidity:{type:String},
     promocode:{type:String,require:true},//week40
     promoType:{type:String,require:true}, //bank//user//all/card
     bank:[
