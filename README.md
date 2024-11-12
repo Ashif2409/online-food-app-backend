@@ -25,7 +25,7 @@ The Online Food Delivery Backend is a comprehensive backend system designed for 
 ## Installation
 
 1. Clone the repository:
-   git clone https://github.com/your-username/onlinefooddel.git
+   git clone https://github.com/Ashif2409/onlinefooddel.git
     cd onlinefooddel
 
 2.Install dependencies:
