@@ -30,4 +30,4 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
     return res.json({ message: "vandor Routes" });
 });
 
-export { router as VandorRoutes };
+export { router as VendorRoutes };

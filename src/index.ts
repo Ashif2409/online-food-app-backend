@@ -2,21 +2,24 @@ import express, { Request, Response, NextFunction,Application } from 'express';
 import mongoose from 'mongoose';
 import path from 'path';
 import bodyParser from 'body-parser';
-import { VandorRoutes, AdminRoutes, DeliveryRoutes, ShopingRoutes, CustomerRoutes } from './routes';
+import { VendorRoutes, AdminRoutes, DeliveryRoutes, ShopingRoutes, CustomerRoutes } from './routes';
 import { MONGODBURI } from './config';
+import { setupSwaggerDocs } from './swagger'; 
 
 const app: Application = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/images', express.static(path.join(__dirname, 'images')));
+// Swagger docs setup
+setupSwaggerDocs(app);
 mongoose.connect(MONGODBURI)
     .then(() => console.log("DB connected"))
     .catch(err => console.error("Error connecting to DB:", err));
 
 
 app.use("/admin", AdminRoutes);
-app.use("/vandor", VandorRoutes);
+app.use("/vendor", VendorRoutes);
 app.use('/customer', CustomerRoutes);
 app.use('/delivery', DeliveryRoutes);
 app.use(ShopingRoutes);

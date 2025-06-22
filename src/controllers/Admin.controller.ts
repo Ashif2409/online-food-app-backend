@@ -86,8 +86,6 @@ export const CreateVendor = async (req: Request, res: Response, next: NextFuncti
         console.log(err);
         res.status(500).send("Internal server error");
     }
-
-
 }
 
 
