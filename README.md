@@ -25,21 +25,26 @@ The Online Food Delivery Backend is a comprehensive backend system designed for 
 ## Installation
 
 1. Clone the repository:
-   git clone https://github.com/your-username/onlinefooddel.git
-    cd onlinefooddel
+    ```bash
+   git clone [https://github.com/Ashif2409/onlinefooddel.git](https://github.com/Ashif2409/online-food-app-backend.git)
+   cd online-food-app-backend
+
 
 2.Install dependencies:
-  npm install
-
+   ```bash
+    npm init
+    npm install
+```
 3.Build the project:
- npm run dev
- 
+   ```bash
+   npm run dev
+``` 
 ## Configuration
  Create a .env file in the root directory and add the following environment variables:
-  PORT=your_port ,
-  MONGO_URI=your_mongodb_connection_string ,
-  CLOUDINARY_URL=your_cloudinary_url ,
-  TWILIO_ACCOUNT_SID=your_twilio_account_sid ,
-  TWILIO_AUTH_TOKEN=your_twilio_auth_token ,
-  JWT_SECRET=your_jwt_secret ,
+  - PORT=your_port 
+  - MONGO_URI=your_mongodb_connection_string 
+  - CLOUDINARY_URL=your_cloudinary_url 
+  - TWILIO_ACCOUNT_SID=your_twilio_account_sid 
+  - TWILIO_AUTH_TOKEN=your_twilio_auth_token 
+  - JWT_SECRET=your_jwt_secret 
 
