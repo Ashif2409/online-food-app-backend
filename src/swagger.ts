@@ -12,12 +12,16 @@ const options: swaggerJsdoc.Options = {
     },
     servers: [
       {
-        url: 'https://online-food-app-backend.onrender.com', // adjust as per your port
+        url: 'https://online-food-app-backend.onrender.com', // prod
       },
+      {
+        url: 'http://localhost:8080', // dev
+      }
     ],
   },
-  apis: ['./src/routes/*.ts'], // path to your route files (adjust if needed)
+  apis: [process.env.NODE_ENV === 'production' ? './dist/routes/**/*.js' : './src/routes/**/*.ts'],
 };
+
 
 const swaggerSpec = swaggerJsdoc(options);
 
